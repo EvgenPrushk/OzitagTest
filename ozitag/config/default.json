@@ -1,0 +1,4 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://evgen:190287@cluster0.w8rs5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}
