@@ -15,6 +15,7 @@ router.post(
   ],
   async (req, res) => {
     try {
+      console.log("body", req.body);
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
@@ -82,7 +83,7 @@ router.post(
       const token = jwt.sign({ userId: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       });
-      res.json({ token, userId: user.id })
+      res.json({ token, userId: user.id });
     } catch (e) {
       res.status(500).json({ message: "Reped please" });
     }
