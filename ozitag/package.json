@@ -65,5 +65,8 @@
   "description": "Test app",
   "main": "app.js",
   "author": "Evgen Prushak <ogmprushak@mail.ru>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "2.3.2"
+  }
 }
