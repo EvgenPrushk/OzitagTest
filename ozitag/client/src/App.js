@@ -4,9 +4,11 @@ import { useRoutes } from "./pages/routes";
 import { useAuth } from "./hooks/auth.hook";
 import { AuthContext } from "./context/AuthContext";
 import "materialize-css";
+import { NavBar } from "./components/Navbar";
 
 function App() {
   const { token, login, logout, userId } = useAuth();
+  // have or not have token
   const isAuthenticated = !!token;
   const routes = useRoutes(isAuthenticated);
   return (
@@ -20,6 +22,7 @@ function App() {
       }}
     >
       <Router>
+        {isAuthenticated && <NavBar/>}
         <div className="container">{routes}</div>
       </Router>
     </AuthContext.Provider>
